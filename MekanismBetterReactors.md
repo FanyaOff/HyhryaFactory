@@ -1,17 +1,3 @@
-# Better Fusion Reactor ComputerCraft Documentation
-
-## Overview
-Better Fusion Reactor is an addon for Mekanism Generators that makes fusion reactor management more complex and realistic. Instead of a simple "furnace generator," it requires controlling parameters like reactivity, efficiency, and error levels to maintain stable fusion reactions. The mod supports ComputerCraft integration for automation.
-
-## Key Concepts
-- **Reactivity**: Current reactivity must closely match target reactivity for high efficiency. Target reactivity changes dynamically based on plasma temperature.
-- **Efficiency**: Calculated as a percentage (0-100%). Efficiency > 80% reduces error level; < 80% increases it. Efficiency affects energy, heat, and steam generation.
-- **Error Level**: Accumulates if efficiency is low. At 100%, the reactor shuts down and requires re-ignition. Plasma temperature and cooling affect error accumulation rate.
-- **Injection Rate**: Controls fuel injection (even numbers from 0 to 500). Higher rates allow higher temperatures but require more cooling.
-- **Logic Modes**: The Logic Adapter can output redstone signals based on reactor state (READY, CAPACITY, DEPLETED, EFFICIENCY, ERROR_LEVEL) or accept inputs to adjust injection/reactivity (INJECTION_UP/DOWN, REACTIVITY_UP/DOWN).
-- **Cooling**: Active cooling (with coolant) allows higher stable temperatures. Passive cooling limits performance.
-- **Hohlraum**: Required to ignite the reactor. Contains fuel that vaporizes on ignition.
-
 ## ComputerCraft Integration
 Connect a ComputerCraft computer or turtle to the **Fusion Reactor Logic Adapter** block. Use `peripheral.wrap(side)` or `peripheral.find("fusion_reactor_logic_adapter")` to access the peripheral.
 
